@@ -1,7 +1,4 @@
-from email import header
-import imp
 import json
-from unittest import result
 
 import requests
 
@@ -21,16 +18,16 @@ def main() -> dict:
     result = [
         {
             'title': item['title'],
-            'tags': [{'name': i['tags']} for i in item['tags']],
+            'tags': [{'name': i['name']} for i in item['tags']],
             'url': item['url'],
+            'likes_count': item['likes_count'],
+            'created_at': item['created_at'],
         }
         for item in r_get.json()
     ]
 
     return result
 
-if __name__ == '__main__':
-    r = main()
 
-    from pprint import pprint
-    pprint(r)
+if __name__ == '__main__':
+    main()
