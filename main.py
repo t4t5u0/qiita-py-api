@@ -1,9 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-
-from qiita_py_sdk.getArticle import getArticle, Article
-
+from qiita_py_api.getArticle import Article, getArticle
 
 app = FastAPI()
 

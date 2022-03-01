@@ -1,9 +1,8 @@
 [tool.poetry]
-name = "qiita-py-sdk"
+name = "qiita-py-api"
 version = "0.1.0"
 description = ""
 authors = ["t4t5u0 <ymmtryk0902@gmail.com>"]
-# packages = [{ include = "libs" ,from = "qiita_py_sdk"}]
 
 [tool.poetry.scripts]
 start = "main:main"

@@ -1,10 +1,9 @@
 import json
-from pydantic import BaseModel
+from pathlib import Path
 
 import requests
 from fastapi import HTTPException
-
-from pathlib import Path
+from pydantic import BaseModel
 
 
 class Article(BaseModel):
@@ -30,6 +29,8 @@ def getArticle(user_id: str) -> list[Article]:
 
     if r_get.status_code == 404:
         raise HTTPException(status_code=404, detail="user not found")
+
+    # other status code hundle
 
     result = [
         {
