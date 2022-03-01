@@ -16,7 +16,7 @@ class Article(BaseModel):
 
 
 def getArticle(user_id: str) -> list[Article]:
-    p = Path(__file__).resolve().parents[2] / "secrets.json"
+    p = Path(__file__).resolve().parents[1] / "secrets.json"
     print(p)
     with open(p) as f:
         json_load = json.load(f)
