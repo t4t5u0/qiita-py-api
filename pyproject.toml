@@ -3,12 +3,10 @@ name = "qiita-py-sdk"
 version = "0.1.0"
 description = ""
 authors = ["t4t5u0 <ymmtryk0902@gmail.com>"]
-packages = [
-    { include="libs", from="./qiita_py_sdk" },
-]
+# packages = [{ include = "libs" ,from = "qiita_py_sdk"}]
 
 [tool.poetry.scripts]
-start = "qiita_py_sdk.main:app"
+start = "main:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -17,7 +15,7 @@ fastapi = "^0.74.1"
 uvicorn = "^0.17.5"
 
 [tool.poetry.dev-dependencies]
-black = {version = "^22.1.0", allow-prereleases = true}
+black = { version = "^22.1.0", allow-prereleases = true }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
